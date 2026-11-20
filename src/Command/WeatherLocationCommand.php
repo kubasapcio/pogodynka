@@ -12,11 +12,11 @@ use Symfony\Component\Console\Style\SymfonyStyle;
     name: 'weather:location',
     description: 'Add a short description for your command',
 )]
-class WeatherLocationCommand{
+readonly class WeatherLocationCommand{
 
     public function __construct(
-        private readonly \App\Repository\LocationRepository $locationRepository,
-        private readonly \App\Service\WeatherUtil $weatherUtil,
+        private \App\Repository\LocationRepository $locationRepository,
+        private \App\Service\WeatherUtil           $weatherUtil,
     ) {
     }
     public function __invoke(

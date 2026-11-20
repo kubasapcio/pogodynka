@@ -8,7 +8,7 @@ use App\Entity\Measurement;
 use App\Repository\LocationRepository;
 use App\Repository\MeasurementRepository;
 
-class WeatherUtil
+readonly class WeatherUtil
 {
     public function __construct(
         private readonly LocationRepository $locationRepository,
